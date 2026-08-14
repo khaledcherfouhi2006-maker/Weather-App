@@ -1,0 +1,128 @@
+.weather-app {
+    text-align: center;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 500px;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.search-bar input {
+    width: 250px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: white;
+}
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(30, 100, 220, 0.75);
+    color: white;
+    transition: all 0.3s ease;
+}
+.search-bar button:hover{
+    background-color: rgba(20, 80, 190, 0.9);
+}
+.location{
+    margin: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+.main-weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    color: #fff;
+}
+.main-weather img{
+    width: 120px;
+    height: 120px;
+    margin: 5px 0;
+}
+.main-weather p{
+    margin-bottom: 10px;
+}
+.main-weather p:nth-of-type(3){
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.weather-details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    width: 98%;
+    margin: 20px auto;
+    gap: 15px;
+}
+.weather-details p{
+    padding: 25px 40px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.weather-details p:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+.main-weather .error-message{
+    color: #ff6b6b;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.main-weather .temperateur{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+.loading-message{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+}
+@media (max-width:600px){
+    .weather-app{
+        width: 90%;
+    }
+    .search-bar{
+        width: 100%;
+        gap: 8px;
+    }
+    .search-bar input{
+        width: 65%;
+    }
+    .search-bar button{
+        width: 25%;
+    }
+    .weather-details{
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 10px;
+
+    }
+    .main-weather .error-message{
+        font-size: 20px;
+    }
+}
